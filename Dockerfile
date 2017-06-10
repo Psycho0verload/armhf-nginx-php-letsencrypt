@@ -10,7 +10,7 @@ RUN apt -q update && \
     apt -qy upgrade && \
     apt-get autoremove && \
     apt-get clean
-RUN apt install -qy \
+RUN apt -qy install \
     php7.0 \
     php7.0-curl \
     php7.0-gd \
@@ -21,7 +21,9 @@ RUN apt install -qy \
     php7.0-xml \
     php7.0-zip
 RUN apt -qy install nginx
-RUN apt -qy install openssl
+RUN apt -qy install \
+    openssl \
+    certbot
 RUN [ "cross-build-end" ]
 
 EXPOSE 80
