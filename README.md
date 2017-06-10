@@ -1,1 +1,1 @@
-# armhf-nginx-php-letsencrypt
+# armv7hf-nginx-php-letsencrypt
