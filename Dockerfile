@@ -21,6 +21,7 @@ RUN apt install -qy \
     php7.0-xml \
     php7.0-zip
 RUN apt -qy install nginx
+RUN apt -qy install openssl
 RUN [ "cross-build-end" ]
 
 EXPOSE 80
