@@ -3,7 +3,7 @@ MAINTAINER Psycho0verload
 ENV DEBIAN_FRONTEND noninteractive
 RUN ["cross-build-start"]
 RUN echo 'deb http://deb.debian.org/debian stretch-backports main' > /etc/apt/sources.list.d/backports.list && \
-    apt -q update && \
+    apt update && \
     apt -qy upgrade && \
     apt-get autoremove && \
     apt-get clean && \
